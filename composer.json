@@ -1,5 +1,5 @@
 {
-	"name": "samdark/yii2-psr-log-target",
+	"name": "gusgusius/yii2-psr-log-target",
 	"description": "Yii 2 log target which uses PSR-3 compatible logger",
 	"keywords": ["yii", "extension", "log", "psr-3"],
 	"homepage": "https://github.com/samdark/yii2-psr-log-target",
