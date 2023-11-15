@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 /*
  * This file is part of sebastian/diff.
  *
@@ -7,50 +7,66 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace SebastianBergmann\Diff;
 
-final class Diff
+class Diff
 {
-    private string $from;
-    private string $to;
+    /**
+     * @var string
+     */
+    private $from;
 
     /**
-     * @psalm-var list<Chunk>
+     * @var string
      */
-    private array $chunks;
+    private $to;
 
     /**
-     * @psalm-param list<Chunk> $chunks
+     * @var Chunk[]
      */
-    public function __construct(string $from, string $to, array $chunks = [])
+    private $chunks;
+
+    /**
+     * @param string  $from
+     * @param string  $to
+     * @param Chunk[] $chunks
+     */
+    public function __construct($from, $to, array $chunks = array())
     {
         $this->from   = $from;
         $this->to     = $to;
         $this->chunks = $chunks;
     }
 
-    public function getFrom(): string
+    /**
+     * @return string
+     */
+    public function getFrom()
     {
         return $this->from;
     }
 
-    public function getTo(): string
+    /**
+     * @return string
+     */
+    public function getTo()
     {
         return $this->to;
     }
 
     /**
-     * @psalm-return list<Chunk>
+     * @return Chunk[]
      */
-    public function getChunks(): array
+    public function getChunks()
     {
         return $this->chunks;
     }
 
     /**
-     * @psalm-param list<Chunk> $chunks
+     * @param Chunk[] $chunks
      */
-    public function setChunks(array $chunks): void
+    public function setChunks(array $chunks)
     {
         $this->chunks = $chunks;
     }

@@ -12,58 +12,39 @@
     "authors": [
         {
             "name": "Sebastian Bergmann",
-            "email": "sebastian@phpunit.de",
+            "email": "sb@sebastian-bergmann.de",
             "role": "lead"
         }
     ],
     "support": {
         "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-        "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy"
+        "irc": "irc://irc.freenode.net/phpunit"
     },
-    "config": {
-        "platform": {
-            "php": "8.1.0"
-        },
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
-        "ext-dom": "*",
-        "ext-libxml": "*",
-        "ext-xmlwriter": "*",
-        "nikic/php-parser": "^4.15",
-        "phpunit/php-file-iterator": "^4.0",
-        "phpunit/php-text-template": "^3.0",
-        "sebastian/code-unit-reverse-lookup": "^3.0",
-        "sebastian/complexity": "^3.0",
-        "sebastian/environment": "^6.0",
-        "sebastian/lines-of-code": "^2.0",
-        "sebastian/version": "^4.0",
-        "theseer/tokenizer": "^1.2.0"
+        "php": ">=5.3.3",
+        "phpunit/php-file-iterator": "~1.3",
+        "phpunit/php-token-stream": "~1.3",
+        "phpunit/php-text-template": "~1.2",
+        "sebastian/environment": "^1.3.2",
+        "sebastian/version": "~1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.1"
+        "phpunit/phpunit": "~4",
+        "ext-xdebug": ">=2.1.4"
     },
     "suggest": {
-        "ext-pcov": "PHP extension that provides line coverage",
-        "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
+        "ext-dom": "*",
+        "ext-xdebug": ">=2.2.1",
+        "ext-xmlwriter": "*"
     },
     "autoload": {
         "classmap": [
             "src/"
         ]
     },
-    "autoload-dev": {
-        "files": [
-            "tests/TestCase.php",
-            "tests/_files/BankAccountTest.php"
-        ]
-    },
     "extra": {
         "branch-alias": {
-            "dev-main": "10.1-dev"
+            "dev-master": "2.2.x-dev"
         }
     }
 }
